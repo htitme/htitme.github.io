@@ -3,13 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ShadowCrypt test</title>
+	<script>
+	setTimeout(alert(document.body.childNodes[1].shadowRoot.querySelector(".ui")),5000);
+</script>
 </head>
 <body>
 	<input type="text"> <br>
 	<textarea name="txt" id="txt" cols="30" rows="10"></textarea>
 </body>
 
-<script>
-	setTimeOut(alert(document.body.childNodes[1].shadowRoot.querySelector(".ui")),5000);
-</script>
+
 </html>
