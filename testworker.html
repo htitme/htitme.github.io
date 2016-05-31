@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test worker</title>
+</head>
+<body>
+	
+	<script>
+		var worker = new Worker("worker.js");
+		worker.postMessage({
+			id:1,
+			msg:"hello world"
+		});
+
+		while(1){
+			//如果这样的话 还能接收到worker的消息就说明是多线程的了
+		}
+
+		worker.onmessage = function(event){
+			console.log("onmessage 事件触发了" + event.data);
+		}
+
+		worker.onerror = function(event){
+			console.log("error occur");
+		}
+	</script>
+
+
+</body>
+</html>
