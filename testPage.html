@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test Page</title>
+</head>
+<body>
+
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
+
+	<script>
+	function error(){
+		alert("error");
+	}
+	function onInitFs(fs){
+		fs.root.getFile("log.txt",{},function(fileEntry){
+				fileEntry.createWriter(function(fileWriter){
+					fileWriter.onwriteend = function(e){
+						console.log("Write completed.");
+					};
+					fileWriter.onerror = function(e){
+						console.log('Write failed:' + e.toString());
+					};
+
+					var bb = new BlobBuilder();
+					bb.append("lapppeed");
+					fileWriter.write(bb.getBlob('text/plain'));
+				},error);
+			
+			},error);
+		
+	}
+
+	window.webkitRequestFileSystem(window.TEMPORARY,5*1024*1024,onInitFs,error);
+
+	</script>
+
+	
+</body>
+</html>
