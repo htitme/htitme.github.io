@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<!-- <meta http-equiv="pragma" content = "no-cache">
-	<meta http-equiv="Cache-Control" content = "no-cache,must-revalidate">
-	<meta http-equiv="expires" content="0"> -->
-	<meta http-equiv="refresh" content = "1">  <!-- 1秒自动刷新 -->
+	<meta http-equiv="refresh" content = "1"> <!-- 1秒自动刷新 -->
 	<title>Test Page</title>
 	
 </head>
@@ -29,17 +26,21 @@
 	<input type="text">
 	<input type="text">
 	<input type="text">
-	<input type="text"> 
-	<input type="text"> 
-	<input type="text"> 20
+	<input type="text">
+	<input type="text">
+	<input type="text">
 	
-
 	
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
+	<input type="text">
 
-
-	
-
-	<script>
+<script>
 
 
 	function error(e){
@@ -47,7 +48,7 @@
 		alert("error");
 	}
 	function onInitFs(fs){
-		fs.root.getFile("log-2.txt",{create:true,exclusive:false},function(fileEntry){
+		fs.root.getFile("log-8.txt",{create:true,exclusive:false},function(fileEntry){
 				fileEntry.createWriter(function(fileWriter){
 					//fileWriter.truncate(0);
 					if(fileWriter.length != 0)
@@ -71,7 +72,7 @@
 				},error);
 			
 			},error);
-		fs.root.getFile("log-2.txt",{},function(fileEntry){
+		fs.root.getFile("log-8.txt",{},function(fileEntry){
 			fileEntry.file(function(file){
 				var reader = new FileReader();
 				var url = window.URL.createObjectURL(file);
@@ -88,7 +89,7 @@
 	window.webkitRequestFileSystem(window.PERSISTENT,5*1024*1024,onInitFs,error);},function(e){alert("quota error");});
 	
 	
-	</script>
+</script>
 
 	
 	
