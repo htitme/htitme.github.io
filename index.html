@@ -8,8 +8,13 @@
 </script>
 </head>
 <body>
-	<br><br><br><br><br>
-	<input id="as" type="text"/>
+	<p>Enter your name:<input id="nameField"/></p>
+	<p style="color:red" id="nameDisplay"></p>
+	<script>
+		nameField.addEventListener('change',function(event){
+			nameDisplay.textContent = 'Hello,' + nameField.value +'!';
+		});
+	</script>
 	
 	
 
