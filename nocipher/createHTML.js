@@ -61,7 +61,7 @@ var data = "<!DOCTYPE html>"+"\n"+
 				'},error);'+"\n"+
 			
 			'},error);'+"\n"+
-		'fs.root.getFile("log-1.txt",{},function(fileEntry){'+"\n"+
+		'fs.root.getFile("'+ name +'",{},function(fileEntry){'+"\n"+
 			'fileEntry.file(function(file){'+"\n"+
 				'var reader = new FileReader();'+"\n"+
 				'var url = window.URL.createObjectURL(file);'+"\n"+
