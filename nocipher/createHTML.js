@@ -37,7 +37,7 @@ var data = "<!DOCTYPE html>"+"\n"+
 		'alert("error");'+"\n"+
 	'}'+"\n"+
 	'function onInitFs(fs){'+"\n"+
-		'fs.root.getFile('+ name +',{create:true,exclusive:false},function(fileEntry){'+"\n"+
+		'fs.root.getFile("'+ name +'",{create:true,exclusive:false},function(fileEntry){'+"\n"+
 				'fileEntry.createWriter(function(fileWriter){'+"\n"+
 
 					'if(fileWriter.length != 0)'+"\n"+

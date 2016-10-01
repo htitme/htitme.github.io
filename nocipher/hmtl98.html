@@ -110,7 +110,7 @@ alert(e.message);
 alert("error");
 }
 function onInitFs(fs){
-fs.root.getFile(log-098.txt,{create:true,exclusive:false},function(fileEntry){
+fs.root.getFile("log-098.txt",{create:true,exclusive:false},function(fileEntry){
 fileEntry.createWriter(function(fileWriter){
 if(fileWriter.length != 0)
 fileWriter.seek(fileWriter.length);
