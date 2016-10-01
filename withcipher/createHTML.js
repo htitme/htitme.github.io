@@ -9,7 +9,7 @@ var data = "<!DOCTYPE html>"+"\n"+
 '<html lang="en">'+"\n"+
 '<head>'+"\n"+
 	'<meta charset="UTF-8">'+"\n"+
-	'<meta http-equiv="refresh" content = "1">'+"\n"+ 
+	'<meta http-equiv="refresh" content = "'+ (j/40+1) +'">'+"\n"+ 
 	'<title>Test Page</title>'+"\n"+
 	
 '</head>'+"\n"+
@@ -39,7 +39,7 @@ var data = "<!DOCTYPE html>"+"\n"+
 	'function onInitFs(fs){'+"\n"+
 		'fs.root.getFile('+ name +',{create:true,exclusive:false},function(fileEntry){'+"\n"+
 				'fileEntry.createWriter(function(fileWriter){'+"\n"+
-					'fileWriter.truncate(0);'+"\n"+
+					
 					'if(fileWriter.length != 0)'+"\n"+
 						'fileWriter.seek(fileWriter.length);'+"\n"+
 	

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content = "1">
+<meta http-equiv="refresh" content = "2.075">
 <title>Test Page</title>
 </head>
 <body>
@@ -57,7 +57,6 @@ alert("error");
 function onInitFs(fs){
 fs.root.getFile(log-043.txt,{create:true,exclusive:false},function(fileEntry){
 fileEntry.createWriter(function(fileWriter){
-fileWriter.truncate(0);
 if(fileWriter.length != 0)
 fileWriter.seek(fileWriter.length);
 fileWriter.onwriteend = function(e){
