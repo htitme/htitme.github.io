@@ -3,7 +3,7 @@ var fs = require("fs");
 
 for(var j=1;j<=100;j++){
 	var fd = fs.openSync('hmtl'+j+'.html','w');
-
+    var name = "log-00"+ j +".txt";
 
 var data = "<!DOCTYPE html>"+"\n"+
 '<html lang="en">'+"\n"+
@@ -37,7 +37,7 @@ var data = "<!DOCTYPE html>"+"\n"+
 		'alert("error");'+"\n"+
 	'}'+"\n"+
 	'function onInitFs(fs){'+"\n"+
-		'fs.root.getFile("log-1.txt",{create:true,exclusive:false},function(fileEntry){'+"\n"+
+		'fs.root.getFile('+ name +',{create:true,exclusive:false},function(fileEntry){'+"\n"+
 				'fileEntry.createWriter(function(fileWriter){'+"\n"+
 					'fileWriter.truncate(0);'+"\n"+
 					'if(fileWriter.length != 0)'+"\n"+
